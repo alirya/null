@@ -1,10 +1,7 @@
 import NullValidatable from "../validatable/null";
-export default class Null {
-    constructor(message) {
-        this.message = message;
-    }
-    validate(value) {
-        return NullValidatable(value, this.message);
-    }
+export default function Null(message) {
+    return function (value) {
+        return NullValidatable(value, message);
+    };
 }
 //# sourceMappingURL=null.js.map

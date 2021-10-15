@@ -7,26 +7,28 @@ describe(`compiler compatible`,function() {
 
     it(`valid value`,function() {
 
-        let validator = new Validator(StringMessage);
-        let validatable = validator.validate(<unknown>{});
+        let validator = Validator(StringMessage);
+        let validatable = validator(<unknown>{});
 
         if(validatable.valid) {
 
             // compiler pass
             let string : unknown = validatable.value;
+            // @ts-expect-error
+            let nulls : null = validatable.value;
             expect(string).toEqual({});
 
         } else {
 
-            let string : null = validatable.value;
+            let nulls : null = validatable.value;
             fail('validatable.valid should false')
         }
     });
 
     it(`invalid value`,function() {
 
-        let validator = new Validator(StringMessage);
-        let validatable = validator.validate(null);
+        let validator = Validator(StringMessage);
+        let validatable = validator(null);
 
         if(validatable.valid) {
 
@@ -42,8 +44,8 @@ describe(`compiler compatible`,function() {
 
     it(`readonly`,function() {
 
-        let validator = new Validator(StringMessage);
-        let validatable = validator.validate('1');
+        let validator = Validator(StringMessage);
+        let validatable = validator('1');
 
         try {
             // @ts-expect-error
@@ -70,8 +72,8 @@ describe(`compiler compatible`,function() {
 
 it(`valid`,function() {
 
-    let validator = new Validator(StringMessage);
-    let validatable = validator.validate(1);
+    let validator = Validator(StringMessage);
+    let validatable = validator(1);
 
     expect(validatable.valid).toBe(true);
     expect(validatable.value).toBe(1);
@@ -80,8 +82,8 @@ it(`valid`,function() {
 
 it(`invalid`,function() {
 
-    let validator = new Validator(StringMessage);
-    let validatable = validator.validate(null);
+    let validator = Validator(StringMessage);
+    let validatable = validator(null);
 
     expect(validatable.valid).toBe(false);
     expect(validatable.value).toBe(null);
