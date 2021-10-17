@@ -1,5 +1,6 @@
 import NotNullValidatable from "../validatable/not-null";
-export default function NotNull(message) {
+import NotNullMessage from "../validatable/string/not-null";
+export default function NotNull(message = NotNullMessage) {
     return function (value) {
         return NotNullValidatable(value, message);
     };

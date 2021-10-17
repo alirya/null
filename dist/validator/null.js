@@ -1,5 +1,6 @@
 import NullValidatable from "../validatable/null";
-export default function Null(message) {
+import NullMessage from "../validatable/string/null";
+export default function Null(message = NullMessage) {
     return function (value) {
         return NullValidatable(value, message);
     };
