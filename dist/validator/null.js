@@ -1,8 +1,9 @@
-import NullValidatable from "../validatable/null";
-import NullMessage from "../validatable/string/null";
-export default function Null(message = NullMessage) {
-    return function (value) {
-        return NullValidatable(value, message);
-    };
-}
+import NullParameter from "./null-parameter";
+import NullParameters from "./null-parameters";
+export var Null;
+(function (Null) {
+    Null.Parameter = NullParameter;
+    Null.Parameters = NullParameters;
+})(Null || (Null = {}));
+export default Null;
 //# sourceMappingURL=null.js.map
