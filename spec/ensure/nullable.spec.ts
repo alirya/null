@@ -1,5 +1,5 @@
-import Nullable from "../../dist/ensure/nullable";
-import Boolean from "@dikac/t-boolean/ensure/boolean";
+import Nullable from "../../dist/ensure/nullable-parameters";
+import Boolean from "@dikac/t-boolean/ensure/boolean-parameters";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 

@@ -1,5 +1,3 @@
-import NullType from "../string/null-parameters";
-import New from "@dikac/t-function/new";
 import Value from "@dikac/t-value/value";
 import NullParameters from "./null-parameters";
 

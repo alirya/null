@@ -1,5 +1,5 @@
-import Validatable from "../../dist/validatable/null";
-import StringMessage from "../../dist/validatable/string/null";
+import Validatable from "../../dist/validatable/null-parameters";
+import StringMessage from "../../dist/assert/string/null-parameters";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough()});
 

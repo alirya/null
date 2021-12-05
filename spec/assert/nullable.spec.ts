@@ -1,4 +1,4 @@
-import Nullable from "../../dist/assert/nullable";
+import Nullable from "../../dist/assert/nullable-parameters";
 import Boolean from "@dikac/t-boolean/assert/boolean";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});

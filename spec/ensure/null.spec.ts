@@ -1,4 +1,4 @@
-import Null from "../../dist/ensure/null";
+import Null from "../../dist/ensure/null-parameters";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 

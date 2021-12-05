@@ -1,32 +1,28 @@
 import Callback from "@dikac/t-validator/validatable/callback-function-parameters";
+import ValidatableStatic from "@dikac/t-validator/validatable/static";
 import NotNullBoolean from "../boolean/not-null";
-import Validatable from "@dikac/t-validatable/validatable";
-import Message from "@dikac/t-message/message";
-import Value from "@dikac/t-value/value";
-import NotNullMessage from "./string/not-null";
-import Validator from "@dikac/t-validator/validator";
-//
-// export type Return<MessageType, Argument> =
-//     Readonly<Validatable<false> & Message<MessageType> & Value<null>> |
-//     Readonly<Validatable<true> & Message<MessageType> & Value<Argument>>;
+import NotNullMessage from "../assert/string/not-null-parameters";
+import Static from "@dikac/t-validator/message/function/static-parameters";
+import ValidatableType from "@dikac/t-validator/validatable/validatable";
 
-export type Type<MessageType> = Validator<unknown, null, true, false>;
+export type NotNullParametersType<Argument, MessageType> = Readonly<ValidatableStatic<Argument, null, true, false, ValidatableType<Argument | null, MessageType>>>;
 
 export default function NotNullParameters<Argument>(
     value : Argument
-) : Type<string, Argument>;
+) : NotNullParametersType<Argument, string>;
 
 export default function NotNullParameters<Argument, MessageType>(
     value : Argument,
-    message : (result:Readonly<Value<Argument> & Validatable>)=>MessageType
-) : Type<Argument, MessageType>;
+    message : Static<Argument, null, true, false, MessageType>
+) : NotNullParametersType<Argument, MessageType>;
 
 export default function NotNullParameters<Argument, MessageType>(
     value : Argument,
-    message : (result:Readonly<Value<Argument> & Validatable>)=>MessageType|string = NotNullMessage
-) : Type<Argument, MessageType> {
+   // message : (result:Readonly<Value<Argument> & Validatable>)=>MessageType|string = NotNullMessage
+    message : Static<Argument, null, true, false, MessageType|string> = NotNullMessage
+) : NotNullParametersType<Argument, MessageType> {
 
-    return <Type<Argument, MessageType>> Callback(value, NotNullBoolean, message);
+    return <NotNullParametersType<Argument, MessageType>> Callback(value, NotNullBoolean, message);
 }
 
 
