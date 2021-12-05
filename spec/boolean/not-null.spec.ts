@@ -13,7 +13,6 @@ describe(`compiler compatible`,function() {
 
     } else {
 
-        // @ts-expect-error
         let n : null = a;
     }
 
