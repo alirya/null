@@ -18,7 +18,6 @@ export default function NotNullParameters<Argument, MessageType>(
 
 export default function NotNullParameters<Argument, MessageType>(
     value : Argument,
-   // message : (result:Readonly<Value<Argument> & Validatable>)=>MessageType|string = NotNullMessage
     message : Static<Argument, null, true, false, MessageType|string> = NotNullMessage
 ) : NotNullParametersType<Argument, MessageType> {
 
