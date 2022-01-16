@@ -1,7 +1,7 @@
-import ReplaceParameters from "@alirya/array/replace-parameters";
-import Value from "@alirya/value/value";
-import Validatable from "@alirya/validatable/validatable";
-import NullParameters from "./null-parameters";
+import ReplaceParameters from '@alirya/array/replace-parameters';
+import Value from '@alirya/value/value';
+import Validatable from '@alirya/validatable/validatable';
+import NullParameters from './null-parameters';
 
 /**
  * string intended for null message

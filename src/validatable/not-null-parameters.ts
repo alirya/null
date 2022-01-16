@@ -1,10 +1,10 @@
-import Callback from "@alirya/validator/validatable/callback-function-parameters";
-import NotNullBoolean from "../boolean/nonull";
-import Validatable from "@alirya/validatable/validatable";
-import Message from "@alirya/message/message";
-import Value from "@alirya/value/value";
-import NotNullMessage from "./string/nonull";
-import Validator from "@alirya/validator/validator";
+import Callback from '@alirya/validator/validatable/callback-function-parameters';
+import NotNullBoolean from '../boolean/nonull';
+import Validatable from '@alirya/validatable/validatable';
+import Message from '@alirya/message/message';
+import Value from '@alirya/value/value';
+import NotNullMessage from './string/nonull';
+import Validator from '@alirya/validator/validator';
 //
 // export type Return<MessageType, Argument> =
 //     Readonly<Validatable<false> & Message<MessageType> & Value<null>> |

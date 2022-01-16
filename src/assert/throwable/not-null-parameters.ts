@@ -1,5 +1,5 @@
-import NotNullType from "../string/nonull-parameters";
-import New from "@alirya/function/new";
+import NotNullType from '../string/nonull-parameters';
+import New from '@alirya/function/new';
 
 export default function NotNullParameters(
     value : unknown,
@@ -7,5 +7,5 @@ export default function NotNullParameters(
     subject : string = ''
 ) : Error {
 
-    return error(NotNullType(value, false, subject))
+    return error(NotNullType(value, false, subject));
 }

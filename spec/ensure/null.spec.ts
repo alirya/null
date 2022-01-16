@@ -1,13 +1,13 @@
-import Null from "../../dist/ensure/null";
+import Null from '../../dist/ensure/null';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe(`number`,function() {
 
     it(`integer`, () => {
 
         try {
-            Null(1)
+            Null(1);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -16,7 +16,7 @@ describe(`number`,function() {
 
     it(`float`, () => {
         try {
-            Null(1.1)
+            Null(1.1);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -26,7 +26,7 @@ describe(`number`,function() {
     it(`infinity`, () => {
 
         try {
-            Null(Infinity)
+            Null(Infinity);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -36,7 +36,7 @@ describe(`number`,function() {
     it(`Nan`, () => {
 
         try {
-            Null(NaN)
+            Null(NaN);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -44,7 +44,7 @@ describe(`number`,function() {
     });
 });
 
-describe("boolean", function() {
+describe('boolean', function() {
 
     it(`true`, () => {
         try {
@@ -66,7 +66,7 @@ describe("boolean", function() {
 
 });
 
-describe("string", function() {
+describe('string', function() {
 
     it(`primitive`, () => {
         try {
@@ -88,7 +88,7 @@ describe("string", function() {
 
 });
 
-describe("object", function() {
+describe('object', function() {
 
     it(`plain`, () => {
         try {
@@ -110,7 +110,7 @@ describe("object", function() {
 
 });
 
-describe("function", function() {
+describe('function', function() {
 
     it(`anonymous `, () => {
         try {

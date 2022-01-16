@@ -1,5 +1,5 @@
-import NullType from "../string/null-parameters";
-import New from "@alirya/function/new";
+import NullType from '../string/null-parameters';
+import New from '@alirya/function/new';
 
 export default function NullParameters(
     value : unknown,
@@ -7,5 +7,5 @@ export default function NullParameters(
     subject : string = ''
 ) : Error {
 
-    return error(NullType(value, false, subject))
+    return error(NullType(value, false, subject));
 }

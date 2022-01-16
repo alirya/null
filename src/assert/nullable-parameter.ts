@@ -1,7 +1,7 @@
-import Guard from "../boolean/null";
-import Value from "@alirya/value/value";
-import Callback from "@alirya/function/callback/callback";
-import NullableParameters from "./nullable-parameters";
+import Guard from '../boolean/null';
+import Value from '@alirya/value/value';
+import Callback from '@alirya/function/callback/callback';
+import NullableParameters from './nullable-parameters';
 
 export default function NullableParameter<Alternative>(
     value,

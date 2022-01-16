@@ -1,6 +1,6 @@
-import NotNull from "../../../dist/ensure/nonull";
+import NotNull from '../../../dist/ensure/nonull';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe('union', () => {
 

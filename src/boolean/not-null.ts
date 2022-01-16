@@ -1,4 +1,4 @@
-import Null from "./null";
+import Null from './null';
 
 export default function NotNull(value : unknown) : boolean {
 

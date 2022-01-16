@@ -1,5 +1,5 @@
-import NotNullParameter from "./nonull-parameter";
-import NotNullParameters from "./nonull-parameters";
+import NotNullParameter from './nonull-parameter';
+import NotNullParameters from './nonull-parameters';
 
 
 export namespace NotNull {

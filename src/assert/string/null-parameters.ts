@@ -1,6 +1,6 @@
-import ReplaceParameters from "@alirya/array/replace-parameters";
-import Value from "@alirya/value/value";
-import Validatable from "@alirya/validatable/validatable";
+import ReplaceParameters from '@alirya/array/replace-parameters';
+import Value from '@alirya/value/value';
+import Validatable from '@alirya/validatable/validatable';
 
 /**
  * string intended for null message
@@ -34,7 +34,7 @@ export default function NullParameters(
 
     if(!valid) {
 
-        ReplaceParameters(strings, 2, v=>v + ',')
+        ReplaceParameters(strings, 2, v=>v + ',');
 
         strings.push('actual', conversion(value));
     }

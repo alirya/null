@@ -1,5 +1,5 @@
-import Guard from "../boolean/null";
-import AssertNullableParameters from "../assert/nullable-parameters";
+import Guard from '../boolean/null';
+import AssertNullableParameters from '../assert/nullable-parameters';
 
 export default function NullableParameters<Alternative>(
     value : unknown,

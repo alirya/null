@@ -1,7 +1,7 @@
-import NullType from "../string/null-parameters";
-import New from "@alirya/function/new";
-import Value from "@alirya/value/value";
-import NullParameters from "./null-parameters";
+import NullType from '../string/null-parameters';
+import New from '@alirya/function/new';
+import Value from '@alirya/value/value';
+import NullParameters from './null-parameters';
 
 export default function NullParameter(
     {

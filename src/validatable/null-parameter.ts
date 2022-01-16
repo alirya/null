@@ -1,10 +1,10 @@
-import Callback from "@alirya/validator/validatable/callback-function-parameters";
-import NullGuard from "../boolean/null";
-import Validatable from "@alirya/validatable/validatable";
-import Value from "@alirya/value/value";
-import Return from "@alirya/validator/validatable/simple";
-import Instance from "@alirya/validator/validatable/validatable";
-import NullMessage from "./string/null";
+import Callback from '@alirya/validator/validatable/callback-function-parameters';
+import NullGuard from '../boolean/null';
+import Validatable from '@alirya/validatable/validatable';
+import Value from '@alirya/value/value';
+import Return from '@alirya/validator/validatable/simple';
+import Instance from '@alirya/validator/validatable/validatable';
+import NullMessage from './string/null';
 
 export default function NullParameter<Argument>(
     value : Argument

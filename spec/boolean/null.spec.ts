@@ -1,6 +1,6 @@
-import Null from "../../dist/boolean/null";
+import Null from '../../dist/boolean/null';
 
-it("force console log", () => { spyOn(console, 'log').and.callThrough();});
+it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe(`compiler compatible`,function() {
 
@@ -37,7 +37,7 @@ describe(`number`,function() {
     });
 });
 
-describe("boolean", function() {
+describe('boolean', function() {
 
     it(`true`, () => {
         expect(Null(true)).toBeFalse();
@@ -49,7 +49,7 @@ describe("boolean", function() {
 
 });
 
-describe("string", function() {
+describe('string', function() {
 
     it(`primitive`, () => {
         expect(Null('str')).toBeFalse();
@@ -61,7 +61,7 @@ describe("string", function() {
 
 });
 
-describe("object", function() {
+describe('object', function() {
 
     it(`plain`, () => {
         expect(Null({})).toBeFalse();
@@ -73,7 +73,7 @@ describe("object", function() {
 
 });
 
-describe("function", function() {
+describe('function', function() {
 
     it(`anonymous `, () => {
         expect(Null(function () {})).toBeFalse();
@@ -89,7 +89,7 @@ describe("function", function() {
 
 });
 
-describe("empty", function() {
+describe('empty', function() {
 
     it(`null `, () => {
         expect(Null(null)).toBeTrue();

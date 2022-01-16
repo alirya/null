@@ -1,6 +1,6 @@
-import Null_ from "../../../dist/assert/string/null";
+import Null_ from '../../../dist/assert/string/null';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('true', ()=>{
 

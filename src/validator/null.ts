@@ -1,5 +1,5 @@
-import NullParameter from "./null-parameter";
-import NullParameters from "./null-parameters";
+import NullParameter from './null-parameter';
+import NullParameters from './null-parameters';
 
 
 export namespace Null {

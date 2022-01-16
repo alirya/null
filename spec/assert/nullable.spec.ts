@@ -1,14 +1,14 @@
-import Nullable from "../../dist/assert/nullable";
-import Boolean from "@alirya/boolean/assert/boolean";
+import Nullable from '../../dist/assert/nullable';
+import Boolean from '@alirya/boolean/assert/boolean';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe(`number`,function() {
 
     it(`integer`, () => {
 
         try {
-            Nullable(1, Boolean)
+            Nullable(1, Boolean);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -17,7 +17,7 @@ describe(`number`,function() {
 
     it(`float`, () => {
         try {
-            Nullable(1.1, Boolean)
+            Nullable(1.1, Boolean);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -27,7 +27,7 @@ describe(`number`,function() {
     it(`infinity`, () => {
 
         try {
-            Nullable(Infinity, Boolean)
+            Nullable(Infinity, Boolean);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -37,7 +37,7 @@ describe(`number`,function() {
     it(`Nan`, () => {
 
         try {
-            Nullable(NaN, Boolean)
+            Nullable(NaN, Boolean);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -45,7 +45,7 @@ describe(`number`,function() {
     });
 });
 
-describe("boolean", function() {
+describe('boolean', function() {
 
     it(`true`, () => {
         let value = true;
@@ -55,13 +55,13 @@ describe("boolean", function() {
 
     it(`false`, () => {
         let value = false;
-        expect(Nullable(value, Boolean)).toBeUndefined();;
+        expect(Nullable(value, Boolean)).toBeUndefined();
         expect(value).toBeFalse();
     });
 
 });
 
-describe("string", function() {
+describe('string', function() {
 
     it(`primitive`, () => {
         try {
@@ -83,7 +83,7 @@ describe("string", function() {
 
 });
 
-describe("object", function() {
+describe('object', function() {
 
     it(`plain`, () => {
         try {
@@ -105,7 +105,7 @@ describe("object", function() {
 
 });
 
-describe("function", function() {
+describe('function', function() {
 
     it(`anonymous `, () => {
         try {

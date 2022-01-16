@@ -1,6 +1,6 @@
-import Nullable from "../../dist/boolean/nullable";
+import Nullable from '../../dist/boolean/nullable';
 
-it("force console log", () => { spyOn(console, 'log').and.callThrough();});
+it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe(`compiler compatible`,function() {
 
@@ -20,12 +20,12 @@ describe(`compiler compatible`,function() {
 
 describe('valid', () => {
 
-    it("value", () => {
+    it('value', () => {
 
         expect(Nullable<Array<any>>([], Array.isArray )).toBe(true);
     });
 
-    it("undefined", () => {
+    it('undefined', () => {
 
         expect(Nullable<Array<any>>(null, Array.isArray )).toBe(true);
     });
@@ -34,7 +34,7 @@ describe('valid', () => {
 
 describe('invalid', () => {
 
-    it("value", () => {
+    it('value', () => {
 
         expect(Nullable<Array<any>>(1, Array.isArray )).toBe(false);
     });
