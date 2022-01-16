@@ -1,4 +1,4 @@
-import NotNullParameters from "./not-null-parameters";
+import NotNullParameters from "./nonull-parameters";
 export default function NotNullParameter({ error, value }) {
     return NotNullParameters(value, error);
 }

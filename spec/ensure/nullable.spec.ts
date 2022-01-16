@@ -1,5 +1,5 @@
 import Nullable from "../../dist/ensure/nullable";
-import Boolean from "@dikac/t-boolean/ensure/boolean";
+import Boolean from "@alirya/boolean/ensure/boolean";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 

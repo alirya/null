@@ -1,5 +1,5 @@
-import AssertNotNull from "../assert/not-null";
-import NotNullError from "../assert/throwable/not-null-parameters";
+import AssertNotNull from "../assert/nonull";
+import NotNullError from "../assert/throwable/nonull-parameters";
 export default function NotNullParameters(value, error = NotNullError) {
     AssertNotNull(value, error);
     return value;

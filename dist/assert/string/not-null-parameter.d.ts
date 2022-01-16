@@ -1,5 +1,5 @@
-import Value from "@dikac/t-value/value";
-import Validatable from "@dikac/t-validatable/validatable";
+import Value from "@alirya/value/value";
+import Validatable from "@alirya/validatable/validatable";
 /**
  * string intended for null message
  *
@@ -12,3 +12,4 @@ export default function NotNullParameter({ value, valid, subject, conversion, }:
     subject?: string;
     conversion?: (value: unknown) => string;
 }): string;
+//# sourceMappingURL=not-null-parameter.d.ts.map

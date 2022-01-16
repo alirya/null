@@ -1,6 +1,6 @@
-import ReplaceParameters from "@dikac/t-array/replace-parameters";
-import Value from "@dikac/t-value/value";
-import Validatable from "@dikac/t-validatable/validatable";
+import ReplaceParameters from "@alirya/array/replace-parameters";
+import Value from "@alirya/value/value";
+import Validatable from "@alirya/validatable/validatable";
 import NullParameters from "./null-parameters";
 
 /**

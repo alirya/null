@@ -5,3 +5,4 @@ export declare namespace Null {
     const Parameters: typeof NullParameters;
 }
 export default Null;
+//# sourceMappingURL=null.d.ts.map

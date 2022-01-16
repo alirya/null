@@ -1,5 +1,5 @@
-import NotNullType from "../string/not-null-parameters";
-import New from "@dikac/t-function/new";
+import NotNullType from "../string/nonull-parameters";
+import New from "@alirya/function/new";
 
 export default function NotNullParameters(
     value : unknown,

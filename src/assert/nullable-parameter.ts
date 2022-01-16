@@ -1,6 +1,6 @@
 import Guard from "../boolean/null";
-import Value from "@dikac/t-value/value";
-import Callback from "@dikac/t-function/callback/callback";
+import Value from "@alirya/value/value";
+import Callback from "@alirya/function/callback/callback";
 import NullableParameters from "./nullable-parameters";
 
 export default function NullableParameter<Alternative>(

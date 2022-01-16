@@ -1,14 +1,14 @@
-import Validator from "@dikac/t-validator/simple";
-import Validatable from "@dikac/t-validatable/validatable";
-import Message from "@dikac/t-message/message";
-import Value from "@dikac/t-value/value";
+import Validator from "@alirya/validator/simple";
+import Validatable from "@alirya/validatable/validatable";
+import Message from "@alirya/message/message";
+import Value from "@alirya/value/value";
 import NullValidatable from "../validatable/null-parameters";
-import Instance from "@dikac/t-validator/validatable/validatable";
-import Return from "@dikac/t-validator/validatable/simple";
+import Instance from "@alirya/validator/validatable/validatable";
+import Return from "@alirya/validator/validatable/simple";
 import NullMessage from "../assert/string/null-parameters";
-import Dynamic from "@dikac/t-validator/message/function/simple-parameters";
-import Simplest from "@dikac/t-validator/message/function/simplest-parameters";
-import Simple from "@dikac/t-validator/message/function/simple-parameters";
+import Dynamic from "@alirya/validator/message/function/simple-parameters";
+import Simplest from "@alirya/validator/message/function/simplesparameters";
+import Simple from "@alirya/validator/message/function/simple-parameters";
 
 export default function NullParameters() : Validator<unknown, null, Readonly<Instance<unknown, string>>>
 

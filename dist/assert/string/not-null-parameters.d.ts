@@ -7,3 +7,4 @@
  * @param conversion
  */
 export default function NotNullParameters(value: unknown, valid: boolean, subject?: string, conversion?: (value: unknown) => string): string;
+//# sourceMappingURL=not-null-parameters.d.ts.map

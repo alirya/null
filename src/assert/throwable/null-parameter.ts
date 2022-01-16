@@ -1,6 +1,6 @@
 import NullType from "../string/null-parameters";
-import New from "@dikac/t-function/new";
-import Value from "@dikac/t-value/value";
+import New from "@alirya/function/new";
+import Value from "@alirya/value/value";
 import NullParameters from "./null-parameters";
 
 export default function NullParameter(

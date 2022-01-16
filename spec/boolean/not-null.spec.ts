@@ -1,4 +1,4 @@
-import NotNull from "../../dist/boolean/not-null";
+import NotNull from "../../dist/boolean/nonull";
 
 it("force console log", () => { spyOn(console, 'log').and.callThrough();});
 
@@ -8,12 +8,12 @@ describe(`compiler compatible`,function() {
 
     if(NotNull(a)) {
 
-        // @ts-expect-error
+        // @ts-expecerror
         let n : null = a;
 
     } else {
 
-        // @ts-expect-error
+        // @ts-expecerror
         let n : null = a;
     }
 

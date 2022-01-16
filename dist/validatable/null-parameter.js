@@ -1,4 +1,4 @@
-import Callback from "@dikac/t-validator/validatable/callback-function-parameters";
+import Callback from "@alirya/validator/validatable/callback-function-parameters";
 import NullGuard from "../boolean/null";
 import NullMessage from "./string/null";
 export default function NullParameter(value, message = NullMessage) {

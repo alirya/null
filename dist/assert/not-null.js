@@ -1,6 +1,6 @@
-import Guard from "../boolean/not-null";
-import Callback from "@dikac/t-function/assert/callback-parameters";
-import NotNullError from "./throwable/not-null-parameters";
+import Guard from "../boolean/nonull";
+import Callback from "@alirya/function/assert/callback-parameters";
+import NotNullError from "./throwable/nonull-parameters";
 export default function NotNull(value, error = NotNullError) {
     Callback(value, Guard, error);
 }

@@ -1,5 +1,5 @@
-import Validator from "../../dist/validator/not-null";
-import StringMessage from "../../dist/validatable/string/not-null";
+import Validator from "../../dist/validator/nonull";
+import StringMessage from "../../dist/validatable/string/nonull";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough()});
 
@@ -14,7 +14,7 @@ describe(`compiler compatible`,function() {
 
             // compiler pass
             let string : unknown = validatable.value;
-            // @ts-expect-error
+            // @ts-expecerror
             let nulls : null = validatable.value;
             expect(string).toEqual({});
 
@@ -48,18 +48,18 @@ describe(`compiler compatible`,function() {
         let validatable = validator('1');
 
         try {
-            // @ts-expect-error
+            // @ts-expecerror
             validatable.valid = true;
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
         }
 
-        // @ts-expect-error
+        // @ts-expecerror
         validatable.value = true;
 
         try {
-            // @ts-expect-error
+            // @ts-expecerror
             validatable.message = 'message';
             fail('exception should thrown');
         } catch (e) {

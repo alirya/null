@@ -1,6 +1,6 @@
-// import Value from "@dikac/t-value/value";
-// import Validatable from "@dikac/t-validatable/validatable";
-// import NotNullMessage from "../../assert/string/not-null-parameters";
+// import Value from "@alirya/value/value";
+// import Validatable from "@alirya/validatable/validatable";
+// import NotNullMessage from "../../assert/string/nonull-parameters";
 //
 // export default function NotNull(object : Readonly<Value & Validatable>) : string {
 //

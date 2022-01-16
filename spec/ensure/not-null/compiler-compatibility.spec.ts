@@ -1,4 +1,4 @@
-import NotNull from "../../../dist/ensure/not-null";
+import NotNull from "../../../dist/ensure/nonull";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
@@ -10,7 +10,7 @@ describe('union', () => {
 
     let number : number = result;
 
-    // @ts-expect-error
+    // @ts-expecerror
     let undefined : undefined = result;
 });
 
