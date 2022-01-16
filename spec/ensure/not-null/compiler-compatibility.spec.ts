@@ -1,4 +1,4 @@
-import NotNull from '../../../dist/ensure/nonull';
+import NotNull from '../../../dist/ensure/not-null';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

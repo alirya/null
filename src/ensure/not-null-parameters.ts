@@ -1,5 +1,5 @@
-import AssertNotNull from '../assert/nonull';
-import NotNullError from '../assert/throwable/nonull-parameters';
+import AssertNotNull from '../assert/not-null';
+import NotNullError from '../assert/throwable/not-null-parameters';
 import {Union} from 'ts-toolbelt';
 
 export default function NotNullParameters<Type>(
