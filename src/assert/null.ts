@@ -1,6 +1,6 @@
-import Guard from "../boolean/null";
-import Callback from "@dikac/t-function/assert/callback-parameters";
-import NullError from "./throwable/null-parameters";
+import Guard from '../boolean/null';
+import Callback from '@alirya/function/assert/callback-parameters';
+import NullError from './throwable/null-parameters';
 
 export default function Null(
     value : unknown,

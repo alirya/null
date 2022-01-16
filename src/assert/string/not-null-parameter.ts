@@ -1,5 +1,5 @@
-import Value from "@dikac/t-value/value";
-import Validatable from "@dikac/t-validatable/validatable";
+import Value from "@alirya/t-value/value";
+import Validatable from "@alirya/t-validatable/validatable";
 import NullParameters from "./null-parameters";
 
 /**

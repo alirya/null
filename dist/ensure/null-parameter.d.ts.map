@@ -1,0 +1,1 @@
+{"version":3,"file":"null-parameter.d.ts","sourceRoot":"","sources":["../../src/ensure/null-parameter.ts"],"names":[],"mappings":"AAEA,OAAO,KAAK,MAAM,qBAAqB,CAAC;AAGxC,MAAM,CAAC,OAAO,UAAU,aAAa,CACjC,EACI,KAAK,EACL,KAAK,GACR,EAAG,KAAK,GAAG;IACR,KAAM,CAAC,EAAE,CAAC,KAAK,EAAC,OAAO,KAAG,KAAK,CAAA;CAClC,GACD,IAAI,CAGP"}

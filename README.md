@@ -1,2 +1,2 @@
-# t-null
+# null
 typescript null

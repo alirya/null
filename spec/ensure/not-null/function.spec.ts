@@ -1,6 +1,6 @@
 import NotNull from "../../../dist/ensure/not-null-parameters";
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it(`anonymous `, () => {
     let value = function () {};

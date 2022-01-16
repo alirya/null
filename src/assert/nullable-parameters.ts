@@ -1,4 +1,4 @@
-import Guard from "../boolean/null";
+import Guard from '../boolean/null';
 
 export default function NullableParameters<Alternative>(
     value : unknown,
@@ -10,14 +10,14 @@ export default function NullableParameters<Alternative>(
 
         if(!Guard(value)) {
 
-            assert(value)
+            assert(value);
         }
 
     } catch (e) {
 
         if(error) {
 
-            throw error(value)
+            throw error(value);
         }
 
         throw e;

@@ -1,4 +1,4 @@
-import ReplaceParameters from "@dikac/t-array/replace-parameters";
+import ReplaceParameters from '@alirya/array/replace-parameters';
 
 /**
  * string intended for not null message
@@ -32,7 +32,7 @@ export default function NotNullParameters(
 
     if(!valid) {
 
-        ReplaceParameters(strings, 2, v=>v + ',')
+        ReplaceParameters(strings, 2, v=>v + ',');
 
         strings.push('actual', conversion(value));
     }

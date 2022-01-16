@@ -1,6 +1,6 @@
 import NotNull from "../../dist/boolean/not-null";
 
-it("force console log", () => { spyOn(console, 'log').and.callThrough();});
+it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe(`compiler compatible`,function() {
 
@@ -8,11 +8,12 @@ describe(`compiler compatible`,function() {
 
     if(NotNull(a)) {
 
-        // @ts-expect-error
+        // @ts-expecerror
         let n : null = a;
 
     } else {
 
+        // @ts-expecerror
         let n : null = a;
     }
 
@@ -37,7 +38,7 @@ describe(`number`,function() {
     });
 });
 
-describe("boolean", function() {
+describe('boolean', function() {
 
     it(`true`, () => {
         expect(NotNull(true)).toBeTrue();
@@ -49,7 +50,7 @@ describe("boolean", function() {
 
 });
 
-describe("string", function() {
+describe('string', function() {
 
     it(`primitive`, () => {
         expect(NotNull('str')).toBeTrue();
@@ -61,7 +62,7 @@ describe("string", function() {
 
 });
 
-describe("object", function() {
+describe('object', function() {
 
     it(`plain`, () => {
         expect(NotNull({})).toBeTrue();
@@ -73,7 +74,7 @@ describe("object", function() {
 
 });
 
-describe("function", function() {
+describe('function', function() {
 
     it(`anonymous `, () => {
         expect(NotNull(function () {})).toBeTrue();
@@ -89,7 +90,7 @@ describe("function", function() {
 
 });
 
-describe("empty", function() {
+describe('empty', function() {
 
     it(`null `, () => {
         expect(NotNull(null)).toBeFalse();

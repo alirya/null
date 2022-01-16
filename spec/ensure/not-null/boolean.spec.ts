@@ -1,6 +1,6 @@
-import NotNull from "../../../dist/ensure/not-null-parameters";
+import NotNull from '../../../dist/ensure/nonull';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it(`true`, () => {
 

@@ -1,6 +1,6 @@
 import NotNull from "../../../dist/assert/string/not-null-parameters";
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 let data = new Map<[boolean, any, string?], string>();
 

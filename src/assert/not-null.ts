@@ -1,7 +1,7 @@
-import Guard from "../boolean/not-null";
-import Callback from "@dikac/t-function/assert/callback-parameters";
-import NotNullError from "./throwable/not-null-parameters";
-import {Union} from "ts-toolbelt"
+import Guard from '../boolean/nonull';
+import Callback from '@alirya/function/assert/callback-parameters';
+import NotNullError from './throwable/nonull-parameters';
+import {Union} from 'ts-toolbelt';
 
 export default function NotNull<Type>(
     value : Type,
