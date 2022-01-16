@@ -1,8 +1,8 @@
-import Callback from "@dikac/t-validator/validatable/callback-function-parameters";
+import Callback from "@alirya/validator/validatable/callback-function-parameters";
 import NullGuard from "../boolean/null";
-import Return from "@dikac/t-validator/validatable/simple";
-import Instance from "@dikac/t-validator/validatable/validatable";
-import Dynamic from "@dikac/t-validator/message/function/simple-parameters";
+import Return from "@alirya/validator/validatable/simple";
+import Instance from "@alirya/validator/validatable/validatable";
+import Dynamic from "@alirya/validator/message/function/simple-parameters";
 import NullMessage from "../assert/string/null-parameters";
 
 export default function NullParameters<Argument>(

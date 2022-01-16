@@ -1,4 +1,4 @@
-import Callback from "@dikac/t-function/callback/callback";
+import Callback from "@alirya/function/callback/callback";
 import NullableParameters from "./nullable-parameters";
 
 export default function NullableParameter<Alternative>(

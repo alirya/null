@@ -1,7 +1,7 @@
-import Callback from "@dikac/t-validator/validatable/callback-function-parameters";
+import Callback from "@alirya/validator/validatable/callback-function-parameters";
 import NotNullBoolean from "../boolean/not-null";
 import NotNullMessage from "../assert/string/not-null-parameters";
-import Static from "@dikac/t-validator/message/function/static-parameters";
+import Static from "@alirya/validator/message/function/static-parameters";
 import {NotNullParametersType} from "./not-null-parameters";
 
 export type {NotNullParametersType};

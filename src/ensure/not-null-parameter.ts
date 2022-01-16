@@ -1,5 +1,5 @@
 import {Union} from "ts-toolbelt"
-import Value from "@dikac/t-value/value";
+import Value from "@alirya/value/value";
 import NotNullParameters from "./not-null-parameters";
 
 export default function NotNullParameter<Type>(

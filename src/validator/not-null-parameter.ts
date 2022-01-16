@@ -1,8 +1,8 @@
-import ValidatorAbstract from "@dikac/t-validator/validator";
+import ValidatorAbstract from "@alirya/validator/validator";
 import NotNullValidatable from "../validatable/not-null-parameters";
-import Instance from "@dikac/t-validator/validatable/validatable";
+import Instance from "@alirya/validator/validatable/validatable";
 import NotNullMessage from "../assert/string/not-null-parameter";
-import Static from "@dikac/t-validator/message/function/static-parameter";
+import Static from "@alirya/validator/message/function/static-parameter";
 
 export default function NotNullParameter() : ValidatorAbstract<unknown, null, true, false, Readonly<Instance<null, string>>>;
 
