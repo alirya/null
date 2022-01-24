@@ -2,7 +2,7 @@ import NotNull from '../../../dist/assert/not-null';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
-describe('union', () => {
+it('union', () => {
 
     let target : null|number = <any>1;
 
@@ -10,11 +10,11 @@ describe('union', () => {
 
     let number : number = target;
 
-    // @ts-expecerror
+    // @ts-expect-error
     let null_ : null = target;
 });
 
-describe('unknown', () => {
+it('unknown', () => {
 
     let target : any = 1;
 

@@ -1,8 +1,8 @@
-import NotNull from '../../../dist/ensure/not-null';
+import NotNull from '../../../dist/ensure/not-null-parameters';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
-describe('union', () => {
+it('union', () => {
 
     let target : null|number = <any>1;
 
@@ -10,11 +10,11 @@ describe('union', () => {
 
     let number : number = result;
 
-    // @ts-expecerror
+    // @ts-expect-error
     let undefined : undefined = result;
 });
 
-describe('unknown', () => {
+it('unknown', () => {
 
     let target : any = 1;
 

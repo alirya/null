@@ -2,18 +2,18 @@ import NotNull from "../../dist/boolean/not-null";
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
-describe(`compiler compatible`,function() {
+it(`compiler compatible`,function() {
 
     let a : unknown = '1';
 
     if(NotNull(a)) {
 
-        // @ts-expecerror
+        // @ts-expect-error
         let n : null = a;
 
     } else {
 
-        // @ts-expecerror
+        // @ts-expect-error
         let n : null = a;
     }
 

@@ -14,7 +14,7 @@ describe(`compiler compatible`,function() {
 
             // compiler pass
             let string : unknown = validatable.value;
-            // @ts-expecerror
+            // @ts-expect-error
             let nulls : null = validatable.value;
             expect(string).toEqual({});
 
@@ -48,18 +48,18 @@ describe(`compiler compatible`,function() {
         let validatable = validator('1');
 
         try {
-            // @ts-expecerror
+            // @ts-expect-error
             validatable.valid = true;
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
         }
 
-        // @ts-expecerror
+        // @ts-expect-error
         validatable.value = true;
 
         try {
-            // @ts-expecerror
+            // @ts-expect-error
             validatable.message = 'message';
             fail('exception should thrown');
         } catch (e) {
