@@ -30,12 +30,12 @@ export default function NotNullParameters(
 
     strings.push('not null');
 
-    if(!valid) {
-
-        ReplaceParameters(strings, 2, v=>v + ',');
-
-        strings.push('actual', conversion(value));
-    }
+    // if(!valid) {
+    //
+    //     ReplaceParameters(strings, 2, v=>v + ',');
+    //
+    //     strings.push('actual', conversion(value));
+    // }
 
     return strings.join(' ') + '.';
 }
