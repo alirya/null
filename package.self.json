@@ -11,6 +11,9 @@
     "@alirya/value": "^0.15.0-beta.2",
     "@alirya/array": "^0.26.0-alpha.1"
   },
+  "devDependencies": {
+    "@alirya/boolean": "^0.11.0-beta.6"
+  },
   "homepage": "https://github.com/alirya/null",
   "repository": {
     "type": "git",
