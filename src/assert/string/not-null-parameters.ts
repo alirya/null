@@ -1,5 +1,3 @@
-import ReplaceParameters from '@alirya/array/replace-parameters';
-
 /**
  * string intended for not null message
  *
