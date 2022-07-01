@@ -1,13 +1,13 @@
-import Null from "../../dist/ensure/null-parameters";
+import {NullParameters} from '../../dist/ensure/null';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe(`number`,function() {
 
     it(`integer`, () => {
 
         try {
-            Null(1)
+            NullParameters(1);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -16,7 +16,7 @@ describe(`number`,function() {
 
     it(`float`, () => {
         try {
-            Null(1.1)
+            NullParameters(1.1);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -26,7 +26,7 @@ describe(`number`,function() {
     it(`infinity`, () => {
 
         try {
-            Null(Infinity)
+            NullParameters(Infinity);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -36,7 +36,7 @@ describe(`number`,function() {
     it(`Nan`, () => {
 
         try {
-            Null(NaN)
+            NullParameters(NaN);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -44,11 +44,11 @@ describe(`number`,function() {
     });
 });
 
-describe("boolean", function() {
+describe('boolean', function() {
 
     it(`true`, () => {
         try {
-            Null(true);
+            NullParameters(true);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -57,7 +57,7 @@ describe("boolean", function() {
 
     it(`false`, () => {
         try {
-            Null(false);
+            NullParameters(false);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -66,11 +66,11 @@ describe("boolean", function() {
 
 });
 
-describe("string", function() {
+describe('string', function() {
 
     it(`primitive`, () => {
         try {
-            Null('str');
+            NullParameters('str');
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -79,7 +79,7 @@ describe("string", function() {
 
     it(`object`, () => {
         try {
-            Null(new String('str'));
+            NullParameters(new String('str'));
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -88,11 +88,11 @@ describe("string", function() {
 
 });
 
-describe("object", function() {
+describe('object', function() {
 
     it(`plain`, () => {
         try {
-            Null({});
+            NullParameters({});
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -101,7 +101,7 @@ describe("object", function() {
 
     it(`instance`, () => {
         try {
-            Null(new Map());
+            NullParameters(new Map());
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -110,11 +110,11 @@ describe("object", function() {
 
 });
 
-describe("function", function() {
+describe('function', function() {
 
     it(`anonymous `, () => {
         try {
-            Null(function () {});
+            NullParameters(function () {});
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -123,7 +123,7 @@ describe("function", function() {
 
     it(`anonymous arrow`, () => {
         try {
-            Null(()=>{});
+            NullParameters(()=>{});
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -132,7 +132,7 @@ describe("function", function() {
 
     it(`named`, () => {
         try {
-            Null(isNaN);
+            NullParameters(isNaN);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -145,12 +145,12 @@ describe("function", function() {
 
 it(`null `, () => {
 
-    expect(Null(null)).toBeNull();
+    expect(NullParameters(null)).toBeNull();
 });
 
 it(`undefined`, () => {
     try {
-        Null(undefined);
+        NullParameters(undefined);
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);

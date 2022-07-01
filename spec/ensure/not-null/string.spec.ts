@@ -1,17 +1,17 @@
-import NotNull from "../../../dist/ensure/not-null-parameters";
+import {NotNullParameters} from '../../../dist/ensure/not-null';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it(`primitive`, () => {
 
     let value = 'str';
-    expect(NotNull(value)).toBe(value);
+    expect(NotNullParameters(value)).toBe(value);
 });
 
 it(`object`, () => {
 
     let value = new String('str');
-    expect(NotNull(value)).toBe(value);
+    expect(NotNullParameters(value)).toBe(value);
 });
 
 

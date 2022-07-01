@@ -1,14 +1,14 @@
-import Nullable from "../../dist/ensure/nullable-parameters";
-import Boolean from "@alirya/boolean/ensure/boolean-parameters";
+import {NullableParameters} from '../../dist/ensure/nullable';
+import {BooleanParameters} from '@alirya/boolean/ensure/boolean';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe(`number`,function() {
 
     it(`integer`, () => {
 
         try {
-            Nullable(1, Boolean)
+            NullableParameters(1, BooleanParameters);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -17,7 +17,7 @@ describe(`number`,function() {
 
     it(`float`, () => {
         try {
-            Nullable(1.1, Boolean)
+            NullableParameters(1.1, BooleanParameters);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -27,7 +27,7 @@ describe(`number`,function() {
     it(`infinity`, () => {
 
         try {
-            Nullable(Infinity, Boolean)
+            NullableParameters(Infinity, BooleanParameters);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -37,7 +37,7 @@ describe(`number`,function() {
     it(`Nan`, () => {
 
         try {
-            Nullable(NaN, Boolean)
+            NullableParameters(NaN, BooleanParameters);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -45,25 +45,25 @@ describe(`number`,function() {
     });
 });
 
-describe("boolean", function() {
+describe('boolean', function() {
 
     it(`true`, () => {
         let value = true;
-        expect(Nullable(value, Boolean)).toBeTrue();
+        expect(NullableParameters(value, BooleanParameters)).toBeTrue();
     });
 
     it(`false`, () => {
         let value = false;
-        expect(Nullable(value, Boolean)).toBeFalse();
+        expect(NullableParameters(value, BooleanParameters)).toBeFalse();
     });
 
 });
 
-describe("string", function() {
+describe('string', function() {
 
     it(`primitive`, () => {
         try {
-            Nullable('str', Boolean);
+            NullableParameters('str', BooleanParameters);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -72,7 +72,7 @@ describe("string", function() {
 
     it(`object`, () => {
         try {
-            Nullable(new String('str'), Boolean);
+            NullableParameters(new String('str'), BooleanParameters);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -81,11 +81,11 @@ describe("string", function() {
 
 });
 
-describe("object", function() {
+describe('object', function() {
 
     it(`plain`, () => {
         try {
-            Nullable({}, Boolean);
+            NullableParameters({}, BooleanParameters);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -94,7 +94,7 @@ describe("object", function() {
 
     it(`instance`, () => {
         try {
-            Nullable(new Map(), Boolean);
+            NullableParameters(new Map(), BooleanParameters);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -103,11 +103,11 @@ describe("object", function() {
 
 });
 
-describe("function", function() {
+describe('function', function() {
 
     it(`anonymous `, () => {
         try {
-            Nullable(function () {}, Boolean);
+            NullableParameters(function () {}, BooleanParameters);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -116,7 +116,7 @@ describe("function", function() {
 
     it(`anonymous arrow`, () => {
         try {
-            Nullable(()=>{}, Boolean);
+            NullableParameters(()=>{}, BooleanParameters);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -125,7 +125,7 @@ describe("function", function() {
 
     it(`named`, () => {
         try {
-            Nullable(isNaN, Boolean);
+            NullableParameters(isNaN, BooleanParameters);
             fail('exception should thrown');
         } catch (e) {
             expect(e).toBeInstanceOf(Error);
@@ -138,13 +138,13 @@ describe("function", function() {
 it(`null `, () => {
 
     let value = null;
-    Nullable(value, Boolean);
+    NullableParameters(value, BooleanParameters);
     expect(value).toBeNull();
 });
 
 it(`undefined`, () => {
     try {
-        Nullable(undefined, Boolean);
+        NullableParameters(undefined, BooleanParameters);
         fail('exception should thrown');
     } catch (e) {
         expect(e).toBeInstanceOf(Error);

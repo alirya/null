@@ -1,4 +1,4 @@
-import NotNull from "../../dist/boolean/not-null";
+import NotNull from '../../dist/boolean/not-null';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

@@ -1,14 +1,14 @@
-import NotNull from '../../../dist/ensure/not-null-parameters';
+import {NotNullParameters} from '../../../dist/ensure/not-null';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it(`true`, () => {
 
-     NotNull(true);
+     NotNullParameters(true);
 });
 
 it(`false`, () => {
 
-     NotNull(false);
+     NotNullParameters(false);
 });
 

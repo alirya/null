@@ -1,14 +1,14 @@
-import Validatable from "../../dist/validatable/null-parameters";
-import StringMessage from "../../dist/assert/string/null-parameters";
+import Validatable from '../../dist/validatable/null';
+import StringMessage from '../../dist/assert/string/null';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough()});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 
 describe(`compiler compatible`,function() {
 
     it(`valid value`,function() {
 
-        let validatable = Validatable(<unknown>null, StringMessage);
+        let validatable = Validatable.Parameters(<unknown>null, StringMessage.Parameters);
 
         if(validatable.valid) {
 
@@ -20,19 +20,19 @@ describe(`compiler compatible`,function() {
 
             // @ts-expect-error
             let string : null = validatable.value;
-            fail('validatable.valid should false')
+            fail('validatable.valid should false');
         }
     });
 
     it(`invalid value`,function() {
 
-        let validatable = Validatable(<unknown>{}, StringMessage);
+        let validatable = Validatable.Parameters(<unknown>{}, StringMessage.Parameters);
 
         if(validatable.valid) {
 
             // compiler pass
             let string : null = validatable.value;
-            fail('validatable.valid should false')
+            fail('validatable.valid should false');
 
         } else {
 
@@ -45,7 +45,7 @@ describe(`compiler compatible`,function() {
 
     it(`readonly`,function() {
 
-        let validatable = Validatable(<unknown>1, StringMessage);
+        let validatable = Validatable.Parameters(<unknown>1, StringMessage.Parameters);
 
         try {
             // @ts-expect-error
@@ -72,21 +72,21 @@ describe(`compiler compatible`,function() {
 
 it(`valid`,function() {
 
-    let validatable = Validatable(null, StringMessage);
+    let validatable = Validatable.Parameters(null, StringMessage.Parameters);
 
     expect(validatable.valid).toBe(true);
     expect(validatable.value).toBe(null);
-    expect(typeof validatable.message).toBe("string");
+    expect(typeof validatable.message).toBe('string');
 
 });
 
 it(`invalid`,function() {
 
-    let validatable = Validatable(11, StringMessage);
+    let validatable = Validatable.Parameters(11, StringMessage.Parameters);
 
     expect(validatable.valid).toBe(false);
     expect(validatable.value).toBe(11);
-    expect(typeof validatable.message).toBe("string");
+    expect(typeof validatable.message).toBe('string');
 
 });
 

@@ -1,10 +1,10 @@
-import Null_ from "../../../dist/assert/string/null-parameters";
+import {NullParameters} from '../../../dist/assert/string/null';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('true', ()=>{
 
-    expect(Null_({}, true, 'value')).toBe(
+    expect(NullParameters({}, true, 'value')).toBe(
         'value is null.'
     );
 
@@ -12,7 +12,7 @@ it('true', ()=>{
 
 it('false', ()=>{
 
-    expect(Null_({}, false, 'value')).toBe(
+    expect(NullParameters({}, false, 'value')).toBe(
         'value must null, actual object.'
     );
 
