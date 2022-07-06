@@ -1,4 +1,4 @@
-import Null from '../../dist/boolean/null';
+import Null from '../../dist/boolean/null.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

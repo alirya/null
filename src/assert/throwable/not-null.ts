@@ -1,6 +1,6 @@
-import NotNullType from '../string/not-null';
-import New from '@alirya/function/new';
-import Value from '@alirya/value/value';
+import NotNullType from '../string/not-null.js';
+import New from '@alirya/function/new.js';
+import Value from '@alirya/value/value.js';
 
 export function NotNullParameters(
     value : unknown,

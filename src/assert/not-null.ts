@@ -1,6 +1,6 @@
-import Guard from '../boolean/not-null';
-import Callback from '@alirya/function/assert/callback';
-import NotNullError from './throwable/not-null';
+import Guard from '../boolean/not-null.js';
+import Callback from '@alirya/function/assert/callback.js';
+import NotNullError from './throwable/not-null.js';
 import {Union} from 'ts-toolbelt';
 
 export default function NotNull<Type>(

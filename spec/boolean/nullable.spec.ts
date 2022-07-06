@@ -1,4 +1,4 @@
-import Nullable from '../../dist/boolean/nullable';
+import Nullable from '../../dist/boolean/nullable.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

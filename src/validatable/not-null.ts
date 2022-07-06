@@ -1,10 +1,10 @@
-import {CallbackParameters} from '@alirya/validator/validatable/callback';
-import ValidatableStatic from '@alirya/validator/validatable/static';
-import NotNullBoolean from '../boolean/not-null';
-import NotNullMessage from '../assert/string/not-null';
-import {StaticParameters} from '@alirya/validator/message/function/static';
-import {StaticParameter} from '@alirya/validator/message/function/static';
-import ValidatableType from '@alirya/validator/validatable/validatable';
+import {CallbackParameters} from '@alirya/validator/validatable/callback.js';
+import ValidatableStatic from '@alirya/validator/validatable/static.js';
+import NotNullBoolean from '../boolean/not-null.js';
+import NotNullMessage from '../assert/string/not-null.js';
+import {StaticParameters} from '@alirya/validator/message/function/static.js';
+import {StaticParameter} from '@alirya/validator/message/function/static.js';
+import ValidatableType from '@alirya/validator/validatable/validatable.js';
 
 export type NotNullReturn<Argument, MessageType> = Readonly<ValidatableStatic<Argument, null, true, false, ValidatableType<Argument | null, MessageType>>>;
 

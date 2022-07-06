@@ -1,5 +1,5 @@
-import Validatable from '../../dist/validatable/not-null';
-import StringMessage from '../../dist/assert/string/not-null';
+import Validatable from '../../dist/validatable/not-null.js';
+import StringMessage from '../../dist/assert/string/not-null.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

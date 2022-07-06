@@ -1,5 +1,5 @@
-import {NullableParameters} from '../../dist/ensure/nullable';
-import {BooleanParameters} from '@alirya/boolean/ensure/boolean';
+import {NullableParameters} from '../../dist/ensure/nullable.js';
+import {BooleanParameters} from '@alirya/boolean/ensure/boolean.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

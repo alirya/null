@@ -1,4 +1,4 @@
-import {NullParameters} from '../../../dist/assert/string/null';
+import {NullParameters} from '../../../dist/assert/string/null.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

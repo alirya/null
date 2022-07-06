@@ -1,8 +1,8 @@
-import Validator from '@alirya/validator/simple';
-import NullValidatable from '../validatable/null';
-import Instance from '@alirya/validator/validatable/validatable';
-import NullMessage from '../assert/string/null';
-import {SimpleParameters, SimpleParameter} from '@alirya/validator/message/function/simple';
+import Validator from '@alirya/validator/simple.js';
+import NullValidatable from '../validatable/null.js';
+import Instance from '@alirya/validator/validatable/validatable.js';
+import NullMessage from '../assert/string/null.js';
+import {SimpleParameters, SimpleParameter} from '@alirya/validator/message/function/simple.js';
 
 export function NullParameters() : Validator<unknown, null, Readonly<Instance<unknown, string>>>;
 
