@@ -9,7 +9,7 @@ export function NotNullParameters() : ValidatorAbstract<unknown, null, true, fal
 
 export function NotNullParameters<Msg>(
     message : StaticParameters<unknown, null, true, false, Msg>
-) : ValidatorAbstract<unknown, null, true, false, Readonly<Instance<null, string>>>;
+) : ValidatorAbstract<unknown, null, true, false, Readonly<Instance<null, Msg>>>;
 
 export function NotNullParameters<Msg>(
     message : StaticParameters<unknown, null, true, false, Msg|string> = NotNullMessage.Parameters
