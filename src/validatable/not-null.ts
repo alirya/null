@@ -6,7 +6,7 @@ import {StaticParameters} from '@alirya/validator/message/function/static';
 import {StaticParameter} from '@alirya/validator/message/function/static';
 import ValidatableType from '@alirya/validator/validatable/validatable';
 
-export type NotNullReturn<Argument, MessageType> = Readonly<ValidatableStatic<Argument, null, true, false, ValidatableType<Argument | null, MessageType>>>;
+export type NotNullReturn<Argument, MessageType> = Readonly<ValidatableStatic<Argument, null, true, false, MessageType>>;
 
 export function NotNullParameters<Argument>(
     value : Argument

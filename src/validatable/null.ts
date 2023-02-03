@@ -10,19 +10,19 @@ import {ValidatableParameter} from '@alirya/validator/message/function/validatab
 
 export function NullParameters<Argument>(
     value : Argument
-) : Return<Argument, null, Readonly<Instance<Argument, string>>>;
+) : Return<Argument, null, string>;
 
 export function NullParameters<MessageType, Argument>(
     value : Argument,
     message : SimpleParameters</*unknown,*/ Argument, null, MessageType>
-) : Return<Argument, null, Readonly<Instance<Argument, MessageType>>>;
+) : Return<Argument, null, MessageType>;
 
 export function NullParameters<MessageType, Argument>(
     value : Argument,
     message : SimpleParameters</*unknown,*/ Argument, null, MessageType|string> = NullMessage.Parameters
-) : Return<Argument, null, Readonly<Instance<Argument, MessageType>>> {
+) : Return<Argument, null, MessageType> {
 
-    return <Return<Argument, null, Readonly<Instance<Argument, MessageType>>>> CallbackParameters(value, NullGuard, message);
+    return <Return<Argument, null, MessageType>> CallbackParameters(value, NullGuard, message);
 }
 
 
@@ -30,7 +30,7 @@ export function NullParameter<Argument>(
     {
         value
     } : Value<Argument>
-) : Return<Argument, null, Readonly<Instance<Argument, string>>>;
+) : Return<Argument, null, string>;
 
 export function NullParameter<MessageType, Argument>(
     {
@@ -44,9 +44,9 @@ export function NullParameter<MessageType, Argument>(
         value,
         message = NullMessage.Parameter,
     } : Value<Argument> & Message<ValidatableParameter<Argument, MessageType|string>>
-) : Return<Argument, null, Readonly<Instance<Argument, MessageType>>> {
+) : Return<Argument, null, MessageType> {
 
-    return <Return<Argument, null, Readonly<Instance<Argument, MessageType>>>> CallbackParameters(value, NullGuard, message);
+    return <Return<Argument, null, MessageType>> CallbackParameters(value, NullGuard, message);
 }
 
 
