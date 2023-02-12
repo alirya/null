@@ -1,16 +1,16 @@
-import {NotNullParameters} from '../../../dist/ensure/not-null';
+import {NotNullParameters} from '../../../dist/ensure/not-null.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it(`plain`, () => {
 
-    let value = {};
+    const value = {};
     expect(NotNullParameters(value)).toBe(value);
 });
 
 it(`instance`, () => {
 
-    let value = new Map();
+    const value = new Map();
     expect(NotNullParameters(value)).toBe(value);
 });
 

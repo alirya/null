@@ -1,25 +1,25 @@
-import NotNull from '../../../dist/assert/not-null';
+import NotNull from '../../../dist/assert/not-null.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('union', () => {
 
-    let target : null|number = <any>1;
+    const target : null|number = <any>1;
 
     NotNull(target);
 
-    let number : number = target;
+    const number : number = target;
 
     // @ts-expect-error
-    let null_ : null = target;
+    const null_ : null = target;
 });
 
 it('unknown', () => {
 
-    let target : any = 1;
+    const target : any = 1;
 
     NotNull(target);
 
-    let null_ : null = target;
+    const null_ : null = target;
 
 });

@@ -1,5 +1,5 @@
-import {NullableParameters} from '../../dist/ensure/nullable';
-import {BooleanParameters} from '@alirya/boolean/ensure/boolean';
+import {NullableParameters} from '../../dist/ensure/nullable.js';
+import {BooleanParameters} from '@alirya/boolean/ensure/boolean.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -48,12 +48,12 @@ describe(`number`,function() {
 describe('boolean', function() {
 
     it(`true`, () => {
-        let value = true;
+        const value = true;
         expect(NullableParameters(value, BooleanParameters)).toBeTrue();
     });
 
     it(`false`, () => {
-        let value = false;
+        const value = false;
         expect(NullableParameters(value, BooleanParameters)).toBeFalse();
     });
 
@@ -137,7 +137,7 @@ describe('function', function() {
 
 it(`null `, () => {
 
-    let value = null;
+    const value = null;
     NullableParameters(value, BooleanParameters);
     expect(value).toBeNull();
 });

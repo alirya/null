@@ -1,19 +1,19 @@
-import Nullable from '../../dist/boolean/nullable';
+import Nullable from '../../dist/boolean/nullable.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it(`compiler compatible`,function() {
 
-    let a : unknown = '1';
+    const a : unknown = '1';
 
     if(Nullable(a, Array.isArray)) {
 
-        let n : null|any[] = a;
+        const n : null|any[] = a;
 
     } else {
 
         // @ts-expect-error
-        let n : null|any[] = a;
+        const n : null|any[] = a;
     }
 
 });

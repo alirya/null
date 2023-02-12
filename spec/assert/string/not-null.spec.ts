@@ -1,8 +1,8 @@
-import {NotNullParameters} from '../../../dist/assert/string/not-null';
+import {NotNullParameters} from '../../../dist/assert/string/not-null.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
-let data = new Map<[boolean, any, string?], string>();
+const data = new Map<[boolean, any, string?], string>();
 
 it('true', ()=>{
 

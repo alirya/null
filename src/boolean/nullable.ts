@@ -1,4 +1,4 @@
-import TypeNull from './null';
+import TypeNull from './null.js';
 /**
  * check if value is null or delegate checking to given validator
  */

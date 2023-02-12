@@ -1,11 +1,11 @@
-import NullType from '../string/null';
-import New from '@alirya/function/new';
-import Value from '@alirya/value/value';
+import NullType from '../string/null.js';
+import New from '@alirya/function/new.js';
+import Value from '@alirya/value/value.js';
 
 export function NullParameters(
     value : unknown,
     error : (string : string)=>Error = New(Error),
-    subject : string = ''
+    subject  = ''
 ) : Error {
 
     return error(NullType.Parameters(value, false, subject));

@@ -1,5 +1,5 @@
-import Validatable from '../../dist/validatable/not-null';
-import StringMessage from '../../dist/assert/string/not-null';
+import Validatable from '../../dist/validatable/not-null.js';
+import StringMessage from '../../dist/assert/string/not-null.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -7,42 +7,42 @@ describe(`compiler compatible`,function() {
 
     it(`valid value`,function() {
 
-        let validatable = Validatable.Parameters(<unknown>{}, StringMessage.Parameters);
+        const validatable = Validatable.Parameters(<unknown>{}, StringMessage.Parameters);
 
         if(validatable.valid) {
 
             // compiler pass
-            let string : unknown = validatable.value;
+            const string : unknown = validatable.value;
             expect(string).toEqual({});
 
         } else {
 
-            let string : null = validatable.value;
+            const string : null = validatable.value;
             fail('validatable.valid should false');
         }
     });
 
     it(`invalid value`,function() {
 
-        let validatable = Validatable.Parameters(<unknown>null, StringMessage.Parameters);
+        const validatable = Validatable.Parameters(<unknown>null, StringMessage.Parameters);
 
         if(validatable.valid) {
 
             // @ts-expect-error
-            let string : null = validatable.value;
+            const string : null = validatable.value;
             fail('validatable.valid should false');
 
         } else {
 
 
-            let string : null = validatable.value;
+            const string : null = validatable.value;
             expect(string).toEqual(null);
         }
     });
 
     it(`readonly`,function() {
 
-        let validatable = Validatable.Parameters(<unknown>1, StringMessage.Parameters);
+        const validatable = Validatable.Parameters(<unknown>1, StringMessage.Parameters);
 
         try {
             // @ts-expect-error
@@ -69,7 +69,7 @@ describe(`compiler compatible`,function() {
 
 it(`valid`,function() {
 
-    let validatable = Validatable.Parameters(null, StringMessage.Parameters);
+    const validatable = Validatable.Parameters(null, StringMessage.Parameters);
 
     expect(validatable.valid).toBe(false);
     expect(validatable.value).toBe(null);
@@ -79,7 +79,7 @@ it(`valid`,function() {
 
 it(`invalid`,function() {
 
-    let validatable = Validatable.Parameters(11, StringMessage.Parameters);
+    const validatable = Validatable.Parameters(11, StringMessage.Parameters);
 
     expect(validatable.valid).toBe(true);
     expect(validatable.value).toBe(11);

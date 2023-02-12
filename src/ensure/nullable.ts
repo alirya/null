@@ -1,6 +1,6 @@
-import {NullableParameters as AssertNullableParameters} from '../assert/nullable';
-import Value from '@alirya/value/value';
-import Callback from '@alirya/function/callback/callback';
+import {NullableParameters as AssertNullableParameters} from '../assert/nullable.js';
+import Value from '@alirya/value/value.js';
+import Callback from '@alirya/function/callback/callback.js';
 
 export function NullableParameters<Alternative>(
     value : unknown,

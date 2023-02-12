@@ -1,6 +1,6 @@
-import Guard from '../boolean/null';
-import Callback from '@alirya/function/assert/callback';
-import NullError from './throwable/null';
+import Guard from '../boolean/null.js';
+import Callback from '@alirya/function/assert/callback.js';
+import NullError from './throwable/null.js';
 
 export default function Null(
     value : unknown,

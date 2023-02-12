@@ -1,11 +1,11 @@
-import NotNullType from '../string/not-null';
-import New from '@alirya/function/new';
-import Value from '@alirya/value/value';
+import NotNullType from '../string/not-null.js';
+import New from '@alirya/function/new.js';
+import Value from '@alirya/value/value.js';
 
 export function NotNullParameters(
     value : unknown,
     error : (string : string)=>Error = New(Error),
-    subject : string = ''
+    subject  = ''
 ) : Error {
 
     return error(NotNullType.Parameters(value, false, subject));

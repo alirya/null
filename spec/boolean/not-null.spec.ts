@@ -1,19 +1,19 @@
-import NotNull from '../../dist/boolean/not-null';
+import NotNull from '../../dist/boolean/not-null.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it(`compiler compatible`,function() {
 
-    let a : unknown = '1';
+    const a : unknown = '1';
 
     if(NotNull(a)) {
 
         // @ts-expect-error
-        let n : null = a;
+        const n : null = a;
 
     } else {
 
-        let n : null = a;
+        const n : null = a;
     }
 
 });

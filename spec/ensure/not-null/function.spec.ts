@@ -1,19 +1,19 @@
-import {NotNullParameters} from '../../../dist/ensure/not-null';
+import {NotNullParameters} from '../../../dist/ensure/not-null.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it(`anonymous `, () => {
-    let value = function () {};
+    const value = function () {};
     expect(NotNullParameters(value)).toBe(value);
 });
 
 it(`anonymous arrow`, () => {
-   let value = ()=>{};
+   const value = ()=>{};
     expect(NotNullParameters(value)).toBe(value);
 });
 
 it(`named`, () => {
-    let value = isNaN;
+    const value = isNaN;
     expect(NotNullParameters(value)).toBe(value);
 });
 

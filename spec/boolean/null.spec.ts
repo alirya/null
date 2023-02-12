@@ -1,19 +1,19 @@
-import Null from '../../dist/boolean/null';
+import Null from '../../dist/boolean/null.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it(`compiler compatible`,function() {
 
-    let a : unknown = '1';
+    const a : unknown = '1';
 
     if(Null(a)) {
 
-        let n : null = a;
+        const n : null = a;
 
     } else {
 
         // @ts-expect-error
-        let n : null = a;
+        const n : null = a;
     }
 
 });

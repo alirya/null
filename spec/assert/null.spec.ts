@@ -1,4 +1,4 @@
-import Null from '../../dist/assert/null';
+import Null from '../../dist/assert/null.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -145,7 +145,7 @@ describe('function', function() {
 
 it(`null `, () => {
 
-    let value = null;
+    const value = null;
     Null(value);
     expect(value).toBeNull();
 });

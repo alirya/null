@@ -1,5 +1,5 @@
-import {NullableParameters} from '../../dist/assert/nullable';
-import Boolean from '@alirya/boolean/assert/boolean';
+import {NullableParameters} from '../../dist/assert/nullable.js';
+import Boolean from '@alirya/boolean/assert/boolean.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -48,13 +48,13 @@ describe(`number`,function() {
 describe('boolean', function() {
 
     it(`true`, () => {
-        let value = true;
+        const value = true;
         expect(NullableParameters(value, Boolean)).toBeUndefined();
         expect(value).toBeTrue();
     });
 
     it(`false`, () => {
-        let value = false;
+        const value = false;
         expect(NullableParameters(value, Boolean)).toBeUndefined();
         expect(value).toBeFalse();
     });
@@ -139,7 +139,7 @@ describe('function', function() {
 
 it(`null `, () => {
 
-    let value = null;
+    const value = null;
     expect(NullableParameters(value, Boolean)).toBeUndefined();
     expect(value).toBeNull();
 });

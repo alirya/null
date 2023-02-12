@@ -1,6 +1,6 @@
-import { ReplaceParameters } from '@alirya/array/replace';
-import Value from '@alirya/value/value';
-import Validatable from '@alirya/validatable/validatable';
+import { ReplaceParameters } from '@alirya/array/replace.js';
+import Value from '@alirya/value/value.js';
+import Validatable from '@alirya/validatable/validatable.js';
 
 /**
  * string intended for null message
@@ -13,7 +13,7 @@ import Validatable from '@alirya/validatable/validatable';
 export function NullParameters(
     value : unknown,
     valid : boolean,
-    subject : string = 'type',
+    subject  = 'type',
     conversion : (value:unknown)=>string = value=>typeof value,
 ) : string {
 
