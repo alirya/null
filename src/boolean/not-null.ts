@@ -5,3 +5,6 @@ export default function NotNull<Type extends unknown>(value: Type): value is Uni
 
     return !Null(value);
 }
+
+
+export {NotNull as IsNotNull};
