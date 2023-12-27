@@ -1,5 +1,5 @@
 import Guard from '../boolean/null.js';
-import Callback from '@alirya/function/callback/callback.js';
+import Callback from '@axiona/function/callback/callback.js';
 
 export function NullableParameters<Alternative>(
     value : unknown,

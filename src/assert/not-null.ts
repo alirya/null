@@ -1,5 +1,5 @@
 import Guard from '../boolean/not-null.js';
-import Callback from '@alirya/function/assert/callback.js';
+import Callback from '@axiona/function/assert/callback.js';
 import NotNullError from './throwable/not-null.js';
 import {Union} from 'ts-toolbelt';
 

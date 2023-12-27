@@ -1,8 +1,8 @@
-import Validator from '@alirya/validator/simple.js';
+import Validator from '@axiona/validator/simple.js';
 import NullValidatable from '../validatable/null.js';
-import Instance from '@alirya/validator/validatable/validatable.js';
+import Instance from '@axiona/validator/validatable/validatable.js';
 import NullMessage from '../assert/string/null.js';
-import {SimpleParameters, SimpleParameter} from '@alirya/validator/message/function/simple.js';
+import {SimpleParameters, SimpleParameter} from '@axiona/validator/message/function/simple.js';
 
 export function NullParameters() : Validator<unknown, null, string>;
 

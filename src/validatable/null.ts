@@ -1,12 +1,12 @@
-import {CallbackParameters} from '@alirya/validator/validatable/callback.js';
+import {CallbackParameters} from '@axiona/validator/validatable/callback.js';
 import NullGuard from '../boolean/null.js';
-import Return from '@alirya/validator/validatable/simple.js';
-import Instance from '@alirya/validator/validatable/validatable.js';
-import {SimpleParameters} from '@alirya/validator/message/function/simple.js';
+import Return from '@axiona/validator/validatable/simple.js';
+import Instance from '@axiona/validator/validatable/validatable.js';
+import {SimpleParameters} from '@axiona/validator/message/function/simple.js';
 import NullMessage from '../assert/string/null.js';
-import Value from '@alirya/value/value.js';
-import Message from '@alirya/message/message.js';
-import {ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import Value from '@axiona/value/value.js';
+import Message from '@axiona/message/message.js';
+import {ValidatableParameter} from '@axiona/validator/message/function/validatable.js';
 
 export function NullParameters<Argument>(
     value : Argument

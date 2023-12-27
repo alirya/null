@@ -1,5 +1,5 @@
 import {NullableParameters} from '../../dist/assert/nullable.js';
-import Boolean from '@alirya/boolean/assert/boolean.js';
+import Boolean from '@axiona/boolean/assert/boolean.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

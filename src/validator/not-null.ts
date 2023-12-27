@@ -1,9 +1,9 @@
-import ValidatorAbstract from '@alirya/validator/validator.js';
+import ValidatorAbstract from '@axiona/validator/validator.js';
 import NotNullValidatable from '../validatable/not-null.js';
-import Instance from '@alirya/validator/validatable/validatable.js';
+import Instance from '@axiona/validator/validatable/validatable.js';
 import NotNullMessage from '../assert/string/not-null.js';
-import {StaticParameters} from '@alirya/validator/message/function/static.js';
-import {StaticParameter} from '@alirya/validator/message/function/static.js';
+import {StaticParameters} from '@axiona/validator/message/function/static.js';
+import {StaticParameter} from '@axiona/validator/message/function/static.js';
 
 export function NotNullParameters() : ValidatorAbstract<unknown, null, true, false, string>;
 

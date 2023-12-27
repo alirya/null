@@ -1,7 +1,7 @@
 import AssertNotNull from '../assert/not-null.js';
 import NotNullError from '../assert/throwable/not-null.js';
 import {Union} from 'ts-toolbelt';
-import Value from '@alirya/value/value.js';
+import Value from '@axiona/value/value.js';
 
 export function NotNullParameters<Type>(
     value : Type,

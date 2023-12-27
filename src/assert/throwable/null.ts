@@ -1,6 +1,6 @@
 import NullType from '../string/null.js';
-import New from '@alirya/function/new.js';
-import Value from '@alirya/value/value.js';
+import New from '@axiona/function/new.js';
+import Value from '@axiona/value/value.js';
 
 export function NullParameters(
     value : unknown,

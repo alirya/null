@@ -1,6 +1,6 @@
 import AssertNull from '../assert/null.js';
 import NullError from '../assert/throwable/null.js';
-import Value from '@alirya/value/value.js';
+import Value from '@axiona/value/value.js';
 
 export function NullParameters(
     value : unknown,
